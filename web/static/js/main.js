@@ -19876,7 +19876,11 @@ var _user$project$Common_View$popup = function (message) {
 									_1: {
 										ctor: '::',
 										_0: {ctor: '_Tuple2', _0: 'border', _1: 'solid 2px black'},
-										_1: {ctor: '[]'}
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'white'},
+											_1: {ctor: '[]'}
+										}
 									}
 								}
 							}
@@ -19976,6 +19980,8 @@ var _user$project$Common_View$backToHomeLink = A2(
 	});
 
 var _user$project$Css_WPCss$primaryAccentColor = _rtfeldman$elm_css$Css$hex('ccffaa');
+var _user$project$Css_WPCss$Warning = {ctor: 'Warning'};
+var _user$project$Css_WPCss$Pagination = {ctor: 'Pagination'};
 var _user$project$Css_WPCss$NavBar = {ctor: 'NavBar'};
 var _user$project$Css_WPCss$Page = {ctor: 'Page'};
 var _user$project$Css_WPCss$css = function (_p0) {
@@ -20049,7 +20055,7 @@ var _user$project$Css_WPCss$css = function (_p0) {
 				{
 					ctor: '::',
 					_0: _rtfeldman$elm_css$Css$backgroundColor(
-						_rtfeldman$elm_css$Css$hex('66CD00')),
+						_rtfeldman$elm_css$Css$hex('59b300')),
 					_1: {
 						ctor: '::',
 						_0: _rtfeldman$elm_css$Css$color(
@@ -20109,7 +20115,14 @@ var _user$project$Css_WPCss$css = function (_p0) {
 							}
 						}
 					}),
-				_1: {ctor: '[]'}
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_rtfeldman$elm_css$Css$class,
+						_user$project$Css_WPCss$Pagination,
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}
 			}
 		}
 	});
@@ -20301,7 +20314,7 @@ var _user$project$Invitation_View$viewList = function (list) {
 				{ctor: '[]'},
 				{
 					ctor: '::',
-					_0: _elm_lang$html$Html$text('guests invited to the wedding'),
+					_0: _elm_lang$html$Html$text('Guests invited to the wedding'),
 					_1: {ctor: '[]'}
 				}),
 			_1: {
@@ -20384,7 +20397,16 @@ var _user$project$Invitation_View$view = function (model) {
 				_elm_lang$html$Html$text(''));
 		default:
 			var _p2 = _p1._0;
-			return A2(
+			return _elm_lang$core$List$isEmpty(_p2.entries) ? A4(
+				_elm_lang$core$Debug$log,
+				'invitations',
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('No invitations found'),
+					_1: {ctor: '[]'}
+				}) : A2(
 				_elm_lang$html$Html$div,
 				{ctor: '[]'},
 				{
@@ -20536,12 +20558,8 @@ var _user$project$Invitation_ViewForm$view = function (invitation) {
 						_0: {ctor: '_Tuple2', _0: 'border', _1: '2px solid black'},
 						_1: {
 							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: 'background-color', _1: 'aqua'},
-							_1: {
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: 'padding', _1: '2px'},
-								_1: {ctor: '[]'}
-							}
+							_0: {ctor: '_Tuple2', _0: 'padding', _1: '2px'},
+							_1: {ctor: '[]'}
 						}
 					}
 				}),
@@ -21117,7 +21135,14 @@ var _user$project$Search_View$listInvitations = function (model) {
 				_elm_lang$html$Html$text(''));
 		default:
 			var _p1 = _p0._0;
-			return A2(
+			return _elm_lang$core$List$isEmpty(_p1.entries) ? A2(
+				_elm_lang$html$Html$div,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text('No invitations found'),
+					_1: {ctor: '[]'}
+				}) : A2(
 				_elm_lang$html$Html$div,
 				{ctor: '[]'},
 				{

@@ -7,6 +7,8 @@ import Css.Namespace exposing (namespace)
 
 type CssClasses
     = NavBar
+    | Pagination
+    | Warning
 
 
 type CssIds
@@ -28,7 +30,7 @@ css =
             , boxSizing borderBox
             ]
         , id Page
-            [ backgroundColor (hex "66CD00")
+            [ backgroundColor (hex "59b300")
             , color (hex "CCFFFF")
             , width (pct 100)
             , height (pct 100)
@@ -45,6 +47,8 @@ css =
                     ]
                 ]
             ]
+        , class Pagination
+            []
         ]
 
 

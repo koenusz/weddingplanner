@@ -63,11 +63,11 @@ exports.config = {
         plugins: ['nib']
       }
     },
-  elmCss: {
-      projectDir: 'web/elm',  // relative to the location of `brunch-config.js`
-      sourcePath: 'src/Css/Stylesheets.elm', // relative to `projectDir`
-      outputDir: '../css', // relative to `projectDir`
-  },
+  // elmCss: {
+  //     projectDir: 'web/elm',  // relative to the location of `brunch-config.js`
+  //     sourcePath: 'src/Css/Stylesheets.elm', // relative to `projectDir`
+  //     outputDir: '../css', // relative to `projectDir`
+  // },
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/web\/static\/vendor/,

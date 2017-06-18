@@ -53,19 +53,25 @@ listInvitations model =
                 (text "")
 
         Success invitations ->
-            div []
-                [ div [ class "content" ]
-                    [ paginationList invitations.total_pages
-                        invitations.page_number
-                    , div
-                        []
-                        (List.map
-                            invitation
-                            invitations.entries
-                        )
+            if List.isEmpty invitations.entries then
+                div
+                    []
+                    [ text "No invitations found" ]
+            else
+                div
+                    []
+                    [ div [ class "content" ]
+                        [ paginationList invitations.total_pages
+                            invitations.page_number
+                        , div
+                            []
+                            (List.map
+                                invitation
+                                invitations.entries
+                            )
+                        ]
+                    , paginationList invitations.total_pages invitations.page_number
                     ]
-                , paginationList invitations.total_pages invitations.page_number
-                ]
 
 
 invitation : Invitation -> Html Msg

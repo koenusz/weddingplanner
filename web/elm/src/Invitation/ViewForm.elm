@@ -38,7 +38,6 @@ view invitation =
         [ style
             [ ( "width", "50%" )
             , ( "border", "2px solid black" )
-            , ( "background-color", "aqua" )
             , ( "padding", "2px" )
             ]
         ]

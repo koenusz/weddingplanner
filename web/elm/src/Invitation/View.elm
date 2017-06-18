@@ -28,22 +28,29 @@ view model =
                 (text "")
 
         Success invitations ->
-            div []
-                [ div [ class "content" ]
-                    [ paginationList invitations.total_pages
-                        invitations.page_number
-                    , div
-                        []
-                        [ viewList invitations.entries ]
+            if List.isEmpty invitations.entries then
+                Debug.log "invitations"
+                    div
+                    []
+                    [ text "No invitations found" ]
+            else
+                div
+                    []
+                    [ div [ class "content" ]
+                        [ paginationList invitations.total_pages
+                            invitations.page_number
+                        , div
+                            []
+                            [ viewList invitations.entries ]
+                        ]
+                    , paginationList invitations.total_pages invitations.page_number
                     ]
-                , paginationList invitations.total_pages invitations.page_number
-                ]
 
 
 viewList : List Invitation -> Html Msg
 viewList list =
     table []
-        [ caption [] [ text "guests invited to the wedding" ]
+        [ caption [] [ text "Guests invited to the wedding" ]
         , thead [] [ th [] [ text "name" ], th [] [ text "wedding" ], th [] [ text "party" ], th [] [ text "dinner" ] ]
         , tbody [] (List.map (viewInvitation) list)
         ]

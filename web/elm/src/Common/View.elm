@@ -39,6 +39,7 @@ popup message =
                     , ( "width", "180px" )
                     , ( "height", "100px" )
                     , ( "border", "solid 2px black" )
+                    , ( "background-color", "white" )
                     ]
                 ]
                 [ h1
