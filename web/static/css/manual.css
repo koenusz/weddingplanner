@@ -21,6 +21,16 @@
    border-radius: inherit;
 }
 
+.fa {
+  padding: 3px;
+}
+
+.fa:hover {
+  background-color: #66cc00;
+  padding: 3px;
+  border-radius: 2px;
+}
+
 .pagination .active{
   background-color: #708090;
 }
@@ -40,6 +50,10 @@
   color: red;
 }
 
+.invitation .fa {
+    width:30px;
+}
+
 .search {
   margin: 15px;
   padding: 5px;
@@ -51,6 +65,12 @@
 
 table {
   margin: 8px;
+  white-space: nowrap;
+  width: 100%
+}
+
+tbody{
+  align-content: center;
 }
 
 header {

@@ -23,9 +23,8 @@ css =
             , width (pct 99)
             , height (vh 98)
             , fontFamilies [ (qt "Josefin Slab"), .value serif ]
-            , border3 (px 200) solid transparent
+            , border3 (px 150) solid transparent
             , property "border-image" "url(../images/invitation_front.png) 150 150 150 150 repeat"
-            , borderImageWidth (px 150)
             , minHeight (pct 100)
             , boxSizing borderBox
             ]

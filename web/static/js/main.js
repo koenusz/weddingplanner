@@ -20020,7 +20020,7 @@ var _user$project$Css_WPCss$css = function (_p0) {
 								ctor: '::',
 								_0: A3(
 									_rtfeldman$elm_css$Css$border3,
-									_rtfeldman$elm_css$Css$px(200),
+									_rtfeldman$elm_css$Css$px(150),
 									_rtfeldman$elm_css$Css$solid,
 									_rtfeldman$elm_css$Css$transparent),
 								_1: {
@@ -20028,17 +20028,12 @@ var _user$project$Css_WPCss$css = function (_p0) {
 									_0: A2(_rtfeldman$elm_css$Css$property, 'border-image', 'url(../images/invitation_front.png) 150 150 150 150 repeat'),
 									_1: {
 										ctor: '::',
-										_0: _rtfeldman$elm_css$Css$borderImageWidth(
-											_rtfeldman$elm_css$Css$px(150)),
+										_0: _rtfeldman$elm_css$Css$minHeight(
+											_rtfeldman$elm_css$Css$pct(100)),
 										_1: {
 											ctor: '::',
-											_0: _rtfeldman$elm_css$Css$minHeight(
-												_rtfeldman$elm_css$Css$pct(100)),
-											_1: {
-												ctor: '::',
-												_0: _rtfeldman$elm_css$Css$boxSizing(_rtfeldman$elm_css$Css$borderBox),
-												_1: {ctor: '[]'}
-											}
+											_0: _rtfeldman$elm_css$Css$boxSizing(_rtfeldman$elm_css$Css$borderBox),
+											_1: {ctor: '[]'}
 										}
 									}
 								}
@@ -20635,7 +20630,7 @@ var _user$project$Invitation_ViewForm$view = function (invitation) {
 										{ctor: '[]'},
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('Wedding'),
+											_0: _elm_lang$html$Html$text('Wedding 16:00 27 Juli'),
 											_1: {ctor: '[]'}
 										}),
 									_1: {
@@ -20652,7 +20647,7 @@ var _user$project$Invitation_ViewForm$view = function (invitation) {
 											},
 											{
 												ctor: '::',
-												_0: _user$project$Invitation_ViewForm$invitationIcon(invitation.party),
+												_0: _user$project$Invitation_ViewForm$invitationIcon(invitation.wedding),
 												_1: {ctor: '[]'}
 											}),
 										_1: {
@@ -20707,7 +20702,7 @@ var _user$project$Invitation_ViewForm$view = function (invitation) {
 											{ctor: '[]'},
 											{
 												ctor: '::',
-												_0: _elm_lang$html$Html$text('Party'),
+												_0: _elm_lang$html$Html$text('Party 20:30 29th of Juli'),
 												_1: {ctor: '[]'}
 											}),
 										_1: {
@@ -20779,7 +20774,7 @@ var _user$project$Invitation_ViewForm$view = function (invitation) {
 												{ctor: '[]'},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text('Dinner'),
+													_0: _elm_lang$html$Html$text('Dinner 18:00 29th of Juli'),
 													_1: {ctor: '[]'}
 												}),
 											_1: {

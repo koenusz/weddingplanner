@@ -3,9 +3,8 @@ body {
     width: 99%;
     height: 98vh;
     font-family: "Josefin Slab", serif;
-    border: 200px solid transparent;
+    border: 150px solid transparent;
     border-image: url(../images/invitation_front.png) 150 150 150 150 repeat;
-    border-image-width: 150px;
     min-height: 100%;
     box-sizing: border-box;
 }

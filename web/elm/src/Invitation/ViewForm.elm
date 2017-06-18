@@ -48,8 +48,8 @@ view invitation =
         , tbody []
             [ if invitation.wedding /= NotInvited then
                 tr []
-                    [ td [] [ text "Wedding" ]
-                    , div [ onClick <| InvitationMsg (IM.Wedding (toggleStatus invitation.wedding)) ] [ invitationIcon invitation.party ]
+                    [ td [] [ text "Wedding 16:00 27 Juli" ]
+                    , div [ onClick <| InvitationMsg (IM.Wedding (toggleStatus invitation.wedding)) ] [ invitationIcon invitation.wedding ]
                     , td []
                         [ input
                             [ type_ "search"
@@ -64,7 +64,7 @@ view invitation =
                 text ""
             , if invitation.party /= NotInvited then
                 tr []
-                    [ td [] [ text "Party" ]
+                    [ td [] [ text "Party 20:30 29th of Juli" ]
                     , div [ onClick <| InvitationMsg (IM.Party (toggleStatus invitation.party)) ] [ invitationIcon invitation.party ]
                     , td []
                         [ input
@@ -80,7 +80,7 @@ view invitation =
                 text ""
             , if invitation.dinner /= NotInvited then
                 tr []
-                    [ td [] [ text "Dinner" ]
+                    [ td [] [ text "Dinner 18:00 29th of Juli" ]
                     , div [ onClick <| InvitationMsg (IM.Dinner (toggleStatus invitation.dinner)) ] [ invitationIcon invitation.dinner ]
                     , td []
                         [ input
