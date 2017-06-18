@@ -1,0 +1,3 @@
+<!-- web/templates/page/index.html.eex -->
+
+<div id="elm_target"></div>
