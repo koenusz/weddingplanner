@@ -58,7 +58,7 @@ exports.config = {
       elmFolder: 'web/elm',
       mainModules: ['src/Main.elm'],
       outputFolder: '../static/js',
-      makeParameters: ['--debug'],
+      //makeParameters: ['--debug'],
       stylus: {
         plugins: ['nib']
       }
@@ -83,5 +83,16 @@ exports.config = {
 
   npm: {
     enabled: true
+  },
+    overrides: {
+    production: {
+      plugins: {
+        elmBrunch: {
+          makeParameters: [],
+        },
+      },
+    },
   }
+
+
 };

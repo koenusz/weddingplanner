@@ -99,6 +99,11 @@ view invitation =
         ]
 
 
+explanation : Html Msg
+explanation =
+    div [] []
+
+
 stringToInt : String -> Int
 stringToInt string =
     case String.toInt string of
